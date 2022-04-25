@@ -56,6 +56,20 @@ div#row_toggles {
 </noscript>
 </head>
 <body>
+<h1>Ortholinear keyboard trainer</h1>
+
+<p>I recently bought an <a href="https://ergodox-ez.com/">ErgoDox EZ keyboard</a>&mdash;my first ortholinear (rather than staggered) keyboard. <a href="https://configure.zsa.io/train">The Oryx &ldquo;Live Training&rdquo; feature</a> helps you learn to type on such a keyboard, but I needed something a little more focused to the task of getting used to straight columns.</p>
+
+<p>So this is a whole-cloth imitation of the Live Training program, but instead of reciting &ldquo;Alice's Adventures in Wonderland&rdquo; or other static texts, this gives you a random series of columns.</p>
+
+<p>It's a little bit specific to my layout, in two ways:</p>
+
+<ul>
+<li>It's Dvorak. I haven't implemented support for QWERTY or other non-Dvorak layouts. (<a href="https://github.com/boredzo/ortholinear-trainer">Pull requests welcome!</a>)</li>
+<li>My rightmost column is \-/. Trying to fit Dvorak into an ErgoDox requires some concessions and this was one of mine. It's probably one of the <em>least</em> contorted variants, but at any rate, your own translation of Dvorak to the ErgoDox (or your keyboard if it's something else) may be different. (Again, <a href="https://github.com/boredzo/ortholinear-trainer">pull requests welcome!</a>)</li>
+</ul>
+
+<hr />
 
 <div id="row_toggles">
 <input type="checkbox" id="include_number_row">Number row</input><br />
