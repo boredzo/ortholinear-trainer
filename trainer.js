@@ -106,7 +106,7 @@ function make_elements(words) {
 		if (++i < words.length) {
 			elements.push(make_character_element(' ', w, is_whitespace=true));
 		} else {
-			elements.push(make_character_element('\n', is_whitespace=true));
+			elements.push(make_character_element('\n', w, is_whitespace=true));
 			elements.push(document.createElement('br'));
 		}
 	}
