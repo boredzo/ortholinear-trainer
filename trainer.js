@@ -85,7 +85,8 @@ function make_elements(words) {
 		let span = document.createElement('span');
 		span.setAttribute('data-character', '' + ch.charCodeAt(0));
 		if (w) {
-			span.setAttribute('data-word', JSON.stringify(w));
+			let w_json = JSON.stringify(w);
+			span.setAttribute('data-word', w_json);
 		}
 		if (is_whitespace) {
 			span.classList.add('whitespace');
