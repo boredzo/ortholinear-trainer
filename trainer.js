@@ -164,14 +164,18 @@ function key_typed(ch) {
 	if (next_ch) {
 		if (ch !== next_ch) {
 			next_element.classList.add('wrong_character');
-			word = JSON.parse(next_element.getAttribute('data-word'));
-			if (word) {
-				if (remedial_columns.length > 0 && remedial_columns.at(-1) === word) {
-					//Fairly basic dupe detection. Could be fooled if the user fouls up two of the same word (we would consider that a dupe), but it's probably fine.
-				} else {
-					remedial_columns.push(word);
-					if (remedial_columns.length > max_remedial_columns) {
-						remedial_columns.shift();
+
+			//If this was a letter in a word, add the word to the remedial-columns list.
+			if (ch !== ' ' && ch !== '\n') {
+				word = JSON.parse(next_element.getAttribute('data-word'));
+				if (word) {
+					if (remedial_columns.length > 0 && remedial_columns.at(-1) === word) {
+						//Fairly basic dupe detection. Could be fooled if the user fouls up two of the same word (we would consider that a dupe), but it's probably fine.
+					} else {
+						remedial_columns.push(word);
+						if (remedial_columns.length > max_remedial_columns) {
+							remedial_columns.shift();
+						}
 					}
 				}
 			}
